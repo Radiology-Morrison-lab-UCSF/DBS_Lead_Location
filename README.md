@@ -17,16 +17,18 @@ Analysis notebooks:
 - `04_aggregate_center.ipynb`: outcome-defined aggregate center analysis and comparison with published STN sweet spots.
 
 Data (`data/`):
-- `outcomes_data.xlsx`: patient-level ΔLEDD, MDS-UPDRS III change scores, covariates (age, sex, target, implant laterality) and VTA-ROI overlap. Used by `01_ledd.ipynb`.
+- `medications_outcomes_data.xlsx`: patient-level ΔLEDD, MDS-UPDRS III change scores, covariates (age, sex, target, implant laterality) and VTA-ROI overlap. Used by `01_ledd.ipynb`.
 - `motor_outcomes_data.xlsx`: motor subgroup outcomes, covariates and VTA-ROI overlap. Used by `02_motor.ipynb`.
-- `cog_tests.xlsx`: neuropsychological scores and change scores, one sheet per test. Used by `03_cognitive.ipynb`.
-- `efield_analysis_ready.csv`: per-hemisphere stimulation parameters, VTA volume and electric field metrics (mean and integrated field magnitude, overlap recomputed from the native field grid) for each region. Underlies the sensitivity analyses in Supplementary Tables S8 to S10.
+- `cog_outcomes_data.xlsx`: neuropsychological change scores (SDS, RCI and RCI+PE), one sheet per test. Used by `03_cognitive.ipynb`.
+- `efield_analysis_ready.xlsx`: per-hemisphere stimulation parameters, VTA volume and electric field metrics (mean and integrated field magnitude, overlap recomputed from the native field grid) for each region. Underlies the sensitivity analyses in Supplementary Tables S8 to S10.
 
 ## Data
 
 245 patients who underwent STN-DBS (n = 107) or GPi-DBS (n = 138) at UCSF between 2016 and 2024. ΔLEDD at approximately 6 months is available for 244 patients (STN n = 107, GPi n = 137). Motor (STN n = 22, GPi n = 20) and neuropsychological (STN n = 25, GPi n = 23) outcomes at approximately 12 months are available for prospectively assessed subgroups.
 
 Patients are identified by study code only. Medical record numbers and all dates (birth, surgery) have been removed, and ages are rounded to whole years. Because the analyses used unrounded ages, age-adjusted results rerun from these files may differ slightly from the published values.
+
+Raw, standardized and percentile neuropsychological scores are not included, as these data are part of an ongoing study; only the change scores used in the analyses (SDS, RCI and RCI+PE) are provided. The change-score calculation steps in `03_cognitive.ipynb` therefore cannot be rerun from this file, but the regression analyses can be run directly on the provided change scores.
 
 ## VTA modeling and overlap
 
